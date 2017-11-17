@@ -24,7 +24,7 @@ public class GlobalExceptionHandler {
 	@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
 	@ExceptionHandler(Exception.class)
 	public void handleAll(Exception e) {
-		LOG.log(Level.SEVERE, "Unhandled exception occurred");
+		LOG.log(Level.SEVERE, "Unhandled exception occurred: " +e.getLocalizedMessage());
 
 	}
 }
